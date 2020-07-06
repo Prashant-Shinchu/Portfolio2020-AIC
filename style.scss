@@ -1,0 +1,277 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+}
+/* -------------------------------- 
+
+File#: _1_author
+Title: Author
+Descr: Author introduction card
+Usage: codyhouse.co/license
+
+-------------------------------- */
+@font-face {
+    font-family: 'fjalla_oneregular';
+    src: url('fjallaone-regular-webfont.woff2') format('woff2'),
+         url('fjallaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+}
+
+:root {
+    --author-img-size: 4em;
+  }
+  
+  .author {
+    display: grid;
+    grid-template-columns: var(--author-img-size) 1fr;
+    grid-gap: var(--space-sm);
+  }
+  
+  .author__img-wrapper { // img link
+    display: inline-block;
+    border-radius: 50%;
+    width: var(--author-img-size);
+    height: var(--author-img-size);
+    overflow: hidden;
+    transition: transform .3s var(--ease-out-back);
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  
+    img {
+      display: block;
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+  
+  .author__content {
+    a {
+      color: inherit;
+  
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  
+  // --meta -> show date + read time
+  .author--meta {
+    --author-img-size: 3em;
+    align-items: center;
+    grid-gap: var(--space-xs);
+  }
+  
+  // --minimal -> show only author name
+  .author--minimal {
+    --author-img-size: 2.4em;
+    align-items: center;
+    grid-gap: var(--space-xxs);
+  }
+  
+  // --featured -> expand author info
+  .author--featured {
+    --author-img-size: 6em;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  
+    .author__img-wrapper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .author__social { // social button
+    display: inline-block;
+    padding: var(--space-xs);
+    background: var(--color-contrast-lower);
+    border-radius: 50%;
+    transition: .2s;
+  
+    .icon {
+      display: block;
+      font-size: 16px; // icon size
+      color: var(--color-contrast-high);
+      transition: color .2s;
+    }
+  
+    &:hover {
+      background-color: var(--color-bg);
+      box-shadow: var(--shadow-sm);
+  
+      .icon {
+        color: var(--color-primary);
+      }
+    }
+}
+
+h1{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'fjalla_oneregular';
+    color: #000;
+    font-size: 3rem;
+}
+
+.introduction{
+    background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+    h1{
+        color: #243949;
+    }
+    h2{
+        color: #243949;
+    }
+    p{
+        color: #243949;
+    }
+    img{
+        border-radius: 30px;
+        box-shadow:
+        0 1.6px 2.2px rgba(0, 0, 0, 0.02),
+        0 3.9px 5.3px rgba(0, 0, 0, 0.028),
+        0 7.3px 10px rgba(0, 0, 0, 0.035),
+        0 13px 17.9px rgba(0, 0, 0, 0.042),
+        0 24.2px 33.4px rgba(0, 0, 0, 0.05),
+        0 58px 80px rgba(0, 0, 0, 0.07)
+        ;
+    }
+    figure{
+      background-color: #45D4FB;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow:
+      0 1.6px 2.2px rgba(0, 0, 0, 0.02),
+      0 3.9px 5.3px rgba(0, 0, 0, 0.028),
+      0 7.3px 10px rgba(0, 0, 0, 0.035),
+      0 13px 17.9px rgba(0, 0, 0, 0.042),
+      0 24.2px 33.4px rgba(0, 0, 0, 0.05),
+      0 58px 80px rgba(0, 0, 0, 0.07)
+    ;
+    }
+    figcaption{
+      background-color: #45D4FB;
+      font-size: 2.5rem;
+      font-family: 'fjalla_oneregular';
+    }
+}
+
+.landing-page{
+
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+
+    .col-lg-3{
+        margin: 5px;
+    }
+
+    .card{
+        width: auto;
+        height: 350px;
+        margin-top: 20px;
+        box-shadow:
+        0 1.6px 2.2px rgba(0, 0, 0, 0.02),
+        0 3.9px 5.3px rgba(0, 0, 0, 0.028),
+        0 7.3px 10px rgba(0, 0, 0, 0.035),
+        0 13px 17.9px rgba(0, 0, 0, 0.042),
+        0 24.2px 33.4px rgba(0, 0, 0, 0.05),
+        0 58px 80px rgba(0, 0, 0, 0.07)
+        ;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 20px;
+
+    }
+    img{
+        width: 250px;
+        height: 250px;
+    }
+    h1{
+        color: white;
+    }
+}
+
+.skills{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    .col-lg-3{
+        background: #C9CCD3;
+        background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+        background-blend-mode: lighten;
+        box-shadow:
+        0 1.6px 2.2px rgba(0, 0, 0, 0.02),
+        0 3.9px 5.3px rgba(0, 0, 0, 0.028),
+        0 7.3px 10px rgba(0, 0, 0, 0.035),
+        0 13px 17.9px rgba(0, 0, 0, 0.042),
+        0 24.2px 33.4px rgba(0, 0, 0, 0.05),
+        0 58px 80px rgba(0, 0, 0, 0.07)
+        ;
+    }
+    h1{
+        color: white;
+    }
+    figure{
+        width: auto;
+        height: 220px;
+        border-radius: 20px;
+        background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+        cursor: pointer;
+    }
+    img{
+        width: 400px;
+        height: 220px;
+    }
+    figcaption{
+        background: #C9CCD3;
+        background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+        background-blend-mode: lighten;
+        margin-top: 20px;
+        font-family: 'fjalla_oneregular';
+        font-size: 1.8rem;
+        border-radius: 20px;
+    }
+}
+
+.explain{
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-blend-mode: multiply;
+    h1{
+        color: white;
+    }
+    h4{
+        font-size: 1.2rem;
+        font-family: 'fjalla_oneregular';
+        letter-spacing: 1px;
+        color: white;
+    }
+    .video-container video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow:
+        0 1.6px 2.2px rgba(0, 0, 0, 0.02),
+        0 3.9px 5.3px rgba(0, 0, 0, 0.028),
+        0 7.3px 10px rgba(0, 0, 0, 0.035),
+        0 13px 17.9px rgba(0, 0, 0, 0.042),
+        0 24.2px 33.4px rgba(0, 0, 0, 0.05),
+        0 58px 80px rgba(0, 0, 0, 0.07)
+        ;
+    }
+    h2{
+      color: #04befe;
+      font-size: 1.6rem;
+      font-family: 'fjalla_oneregular';
+    }
+}
+.social-media{
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  h3{
+    font-size: 1.5rem;
+    font-family: 'fjalla_oneregular';
+    color: #fff;
+  }
+}

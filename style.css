@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+}
+
+/* -------------------------------- 
+
+File#: _1_author
+Title: Author
+Descr: Author introduction card
+Usage: codyhouse.co/license
+
+-------------------------------- */
+@font-face {
+  font-family: 'fjalla_oneregular';
+  src: url("fjallaone-regular-webfont.woff2") format("woff2"), url("fjallaone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --author-img-size: 4em;
+}
+
+.author {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: var(--author-img-size) 1fr;
+      grid-template-columns: var(--author-img-size) 1fr;
+  grid-gap: var(--space-sm);
+}
+
+.author__img-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  width: var(--author-img-size);
+  height: var(--author-img-size);
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s var(--ease-out-back);
+  transition: -webkit-transform 0.3s var(--ease-out-back);
+  transition: transform 0.3s var(--ease-out-back);
+  transition: transform 0.3s var(--ease-out-back), -webkit-transform 0.3s var(--ease-out-back);
+}
+
+.author__img-wrapper:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.author__img-wrapper img {
+  display: block;
+  width: inherit;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.author__content a {
+  color: inherit;
+}
+
+.author__content a:hover {
+  color: var(--color-primary);
+}
+
+.author--meta {
+  --author-img-size: 3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: var(--space-xs);
+}
+
+.author--minimal {
+  --author-img-size: 2.4em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: var(--space-xxs);
+}
+
+.author--featured {
+  --author-img-size: 6em;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.author--featured .author__img-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author__social {
+  display: inline-block;
+  padding: var(--space-xs);
+  background: var(--color-contrast-lower);
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.author__social .icon {
+  display: block;
+  font-size: 16px;
+  color: var(--color-contrast-high);
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.author__social:hover {
+  background-color: var(--color-bg);
+  -webkit-box-shadow: var(--shadow-sm);
+          box-shadow: var(--shadow-sm);
+}
+
+.author__social:hover .icon {
+  color: var(--color-primary);
+}
+
+h1 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'fjalla_oneregular';
+  color: #000;
+  font-size: 3rem;
+}
+
+.introduction {
+  background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+}
+
+.introduction h1 {
+  color: #243949;
+}
+
+.introduction h2 {
+  color: #243949;
+}
+
+.introduction p {
+  color: #243949;
+}
+
+.introduction img {
+  border-radius: 30px;
+  -webkit-box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+}
+
+.introduction figure {
+  background-color: #45D4FB;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+}
+
+.introduction figcaption {
+  background-color: #45D4FB;
+  font-size: 2.5rem;
+  font-family: 'fjalla_oneregular';
+}
+
+.landing-page {
+  background-image: -webkit-gradient(linear, left top, right top, from(#243949), to(#517fa4));
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+.landing-page .col-lg-3 {
+  margin: 5px;
+}
+
+.landing-page .card {
+  width: auto;
+  height: 350px;
+  margin-top: 20px;
+  -webkit-box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.landing-page img {
+  width: 250px;
+  height: 250px;
+}
+
+.landing-page h1 {
+  color: white;
+}
+
+.skills {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.skills .col-lg-3 {
+  background: #C9CCD3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-blend-mode: lighten;
+  -webkit-box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+}
+
+.skills h1 {
+  color: white;
+}
+
+.skills figure {
+  width: auto;
+  height: 220px;
+  border-radius: 20px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ebc0fd), to(#d9ded8));
+  background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+  cursor: pointer;
+}
+
+.skills img {
+  width: 400px;
+  height: 220px;
+}
+
+.skills figcaption {
+  background: #C9CCD3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-blend-mode: lighten;
+  margin-top: 20px;
+  font-family: 'fjalla_oneregular';
+  font-size: 1.8rem;
+  border-radius: 20px;
+}
+
+.explain {
+  background: -webkit-gradient(linear, left top, left bottom, from(#323232), color-stop(40%, #3F3F3F), color-stop(150%, #1C1C1C)), -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.4)), color-stop(200%, rgba(0, 0, 0, 0.25)));
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+}
+
+.explain h1 {
+  color: white;
+}
+
+.explain h4 {
+  font-size: 1.2rem;
+  font-family: 'fjalla_oneregular';
+  letter-spacing: 1px;
+  color: white;
+}
+
+.explain .video-container video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1.6px 2.2px rgba(0, 0, 0, 0.02), 0 3.9px 5.3px rgba(0, 0, 0, 0.028), 0 7.3px 10px rgba(0, 0, 0, 0.035), 0 13px 17.9px rgba(0, 0, 0, 0.042), 0 24.2px 33.4px rgba(0, 0, 0, 0.05), 0 58px 80px rgba(0, 0, 0, 0.07);
+}
+
+.explain h2 {
+  color: #04befe;
+  font-size: 1.6rem;
+  font-family: 'fjalla_oneregular';
+}
+
+.social-media {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.social-media h3 {
+  font-size: 1.5rem;
+  font-family: 'fjalla_oneregular';
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
